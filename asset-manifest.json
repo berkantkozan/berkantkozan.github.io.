@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/berkantkozan.github.io./static/css/main.02140130.css",
+    "main.js": "/berkantkozan.github.io./static/js/main.d4143858.js",
+    "static/js/787.2843ca88.chunk.js": "/berkantkozan.github.io./static/js/787.2843ca88.chunk.js",
+    "static/media/logo.svg": "/berkantkozan.github.io./static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/berkantkozan.github.io./index.html",
+    "main.02140130.css.map": "/berkantkozan.github.io./static/css/main.02140130.css.map",
+    "main.d4143858.js.map": "/berkantkozan.github.io./static/js/main.d4143858.js.map",
+    "787.2843ca88.chunk.js.map": "/berkantkozan.github.io./static/js/787.2843ca88.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02140130.css",
+    "static/js/main.d4143858.js"
+  ]
+}
