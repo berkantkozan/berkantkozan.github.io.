@@ -10,6 +10,7 @@ export default function Header() {
             <a 
                 href="https://tr.reactjs.org/"
                 target="_blank"
+                rel="noreferrer"
                 className="header--project"
             >Learning React</a>
         </nav>
