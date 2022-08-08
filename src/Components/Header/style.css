@@ -1,0 +1,39 @@
+.nav {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    background: linear-gradient(90deg, #223380 1.18%, #d32668 100%);
+    color: white;
+    padding: 20px;
+}
+
+
+.App-logo {
+    height: 10vmin;
+    pointer-events: none;
+    margin-right: 6px;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .header--title {
+    font-size: 1.25rem;
+    margin-right: auto;
+}
+
+.header--project {
+    font-size: 0.75rem;
+    font-weight: 500;
+}

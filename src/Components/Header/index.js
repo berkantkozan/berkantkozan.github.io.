@@ -1,6 +1,6 @@
 import React from "react"
-import logo from '../logo.svg';
-import "./Components.css"
+import logo from './logo.svg';
+import "./style.css"
 
 export default function Header() {
     return (

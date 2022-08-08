@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import Main from "./Components/Main.js"
-import Header from "./Components/Header.js"
+import React from "react";
+import Main from "./Components/Main/index.js"
+import Header from "./Components/Header/index.js"
 
 
 function App() {

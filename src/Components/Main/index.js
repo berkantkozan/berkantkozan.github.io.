@@ -1,7 +1,7 @@
 import React,{useState} from "react";
-import ReactDOM  from "react-dom/client";
-import TodoForm from "./Todo-form.js"
-import Todo from "./Todo.js"
+import TodoForm from "../Todo-Form/index.js"
+import Todo from "../Todo/index.js"
+import "./style.css";
 
 export default function Main () {
     const [todos, setTodos] = useState([

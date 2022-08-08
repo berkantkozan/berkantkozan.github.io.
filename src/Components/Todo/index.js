@@ -1,6 +1,6 @@
 import React from "react";
-import "../App.js";
-import "./Components.css";
+import "../../App.js";
+import "./style.css";
 
 export default function Todo({ todo, index, completeTodo, deleteTodo }) {
   return (
