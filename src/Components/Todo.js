@@ -13,7 +13,7 @@ export default function Todo({ todo, index, completeTodo, deleteTodo }) {
         <button 
               className="div-button"
               onClick={() => completeTodo(index)}
-        >{todo.isCompleted ? "undo" : "check"}</button>
+        >{todo.isCompleted ? "uncheck" : "check"}</button>
         <button
               className="div-button-delete"
               onClick={() => deleteTodo(index)}
