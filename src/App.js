@@ -3,14 +3,12 @@ import Main from "./Components/Main/index.js"
 import Header from "./Components/Header/index.js"
 
 
-function App() {
-
+export default function App() {
   return (
     <div className="main-div">
-      <Header />
-      <Main />
+        <Header />
+        <Main />
     </div>
+    
   );
 }
-
-export default App;

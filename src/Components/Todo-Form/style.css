@@ -23,3 +23,8 @@
     color: rgb(248, 241, 241);
     cursor: pointer
   }
+  .div-button-home:hover {
+    background: linear-gradient(90.41deg, #8a8387 1.14%, #5e585e 100%);
+    color: rgb(248, 241, 241);
+    cursor: pointer
+  }

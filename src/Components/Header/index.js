@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <nav className="nav">
             <img src={logo} className="App-logo" alt="logo" />
-            <h2 className="header--title">TO-DO APP</h2>
+            <h2 className="header--title">TO-DO APP </h2>
             <a 
                 href="https://tr.reactjs.org/"
                 target="_blank"
