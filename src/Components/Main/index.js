@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { BrowserRouter as Router,Routes, Route, Link} from 'react-router-dom';
+import { HashRouter as Router,Routes, Route, Link} from 'react-router-dom';
 import TodoForm from "../Todo-Form/index.js"
 import Description from "../Description/index.js"
 import "./style.css";
