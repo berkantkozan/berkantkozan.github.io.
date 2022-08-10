@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { HashRouter as Router,Routes, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router,Routes, Route, Link} from 'react-router-dom';
 import TodoForm from "../Todo-Form/index.js"
 import Description from "../Description/index.js"
 import "./style.css";
@@ -41,7 +41,7 @@ export default function Main () {
 
     return (
         <main>
-            <Router>
+            <Router basename={process.env.PUBLIC_URL}>
             <div className="div" >
                 <div className="div-alt">
                 <TodoForm addTodo={addTodo}/>
