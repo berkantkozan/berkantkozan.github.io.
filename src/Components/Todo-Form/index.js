@@ -26,6 +26,7 @@ export default function TodoForm({ addTodo}) {
     return (
       <form >
         <button 
+              type="button"
               className="div-button-home" 
               ><Link to = "/">Home</Link>
         </button>
