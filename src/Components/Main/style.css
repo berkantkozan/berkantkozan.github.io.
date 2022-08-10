@@ -45,6 +45,19 @@ main {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
     font-size: 18px;
     margin-bottom: 6px;
+    margin-top: 6px;
     margin-left: 10px;
     padding: 5px 15px;
 }
+.div-button {
+    background: linear-gradient(90.41deg, #1f808d 1.14%, #4c18da 100%);
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    font-size: 18px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 15px;
+    padding: 5px 15px;
+}
+
+
