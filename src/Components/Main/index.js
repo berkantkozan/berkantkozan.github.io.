@@ -77,7 +77,7 @@ function RouterArrange ({ todo, id, completeTodo, deleteTodo,addTodo}){
             <div>
                 <Link to = {smt}>{todo.text}</Link>
                 <Routes>
-                      <Route exact path="/"></Route>
+                      <Route path="/"></Route>
                       <Route 
                           exact path= {smt}
                           element=  {<Description 
