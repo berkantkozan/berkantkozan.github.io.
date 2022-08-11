@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import { Link } from "react-router-dom";
 import "./style.css";
 
 export default function TodoForm({ addTodo}) {
@@ -25,11 +24,6 @@ export default function TodoForm({ addTodo}) {
     */
     return (
       <form >
-        <button 
-              type="button"
-              className="div-button-home" 
-              ><Link to = "/">Home</Link>
-        </button>
         <input
           type="text"
           className="div-input"

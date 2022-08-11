@@ -23,6 +23,9 @@ main {
     margin-right: 10%;
     
 }
+.div-up{
+    display: flex;
+}
 .todo-div {
     align-items: center;
     background: rgb(224, 178, 178);
