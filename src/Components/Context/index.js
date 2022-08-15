@@ -10,16 +10,15 @@ export const ContextProvider = ({ children }) => {
             isCompleted: false,
             description: "hello",
             id: 0,
-            date : new Date()
+            date: new Date()
         },
     ]);
     const [info, setInfo] = useState(false)
     const [selectedTodo, setselectedTodo] = useState({})
 
     const addTodo = (text) => {
-        const newTodos = [...todos, { text }];
-        setTodos(newTodos);
-        newTodos[newTodos.length -1].date = new Date();
+        const newTodo = { text, date: new Date() };
+        setTodos(prevTodos => ([...prevTodos, newTodo]));
     };
 
     const completeTodo = index => {
@@ -28,13 +27,6 @@ export const ContextProvider = ({ children }) => {
         setTodos(newTodos);
     };
 
-    /*const editTodo = (index,text) => {
-        console.log(index,text)
-        const newTodos = [...todos];
-        newTodos[index] = text;
-        setTodos(newTodos)
-    }; */
-
     const deleteTodo = index => {
         const newTodos = [...todos];
         newTodos.splice(index, 1);
@@ -42,14 +34,14 @@ export const ContextProvider = ({ children }) => {
     };
     return (
         <GlobalContext.Provider value={{
-            todos, 
-            setTodos, 
-            addTodo, 
-            completeTodo, 
-            deleteTodo, 
-            info, 
-            setInfo, 
-            selectedTodo, 
+            todos,
+            setTodos,
+            addTodo,
+            completeTodo,
+            deleteTodo,
+            info,
+            setInfo,
+            selectedTodo,
             setselectedTodo
         }} >
             {children}

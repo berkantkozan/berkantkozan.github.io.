@@ -7,7 +7,6 @@ import "./style.css";
 
 export default function Todo({ todo }) {
   const {
-    setselectedTodo,
     completeTodo,
     deleteTodo,
     setInfo,
@@ -16,9 +15,10 @@ export default function Todo({ todo }) {
 
   const navigate = useNavigate();
   const todoDetailOnClick = (todo) => {
-    setselectedTodo(todo)
+    //setselectedTodo(todo)
     setInfo(!info)
     navigate(`/${todo.id}`)
+    console.log(todo.id)
   }
   return (
     <div className="main-div">
