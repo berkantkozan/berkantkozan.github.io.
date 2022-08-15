@@ -1,7 +1,7 @@
 .nav {
     display: flex;
     align-items: center;
-    height: 65px;
+    height: 100px;
     background: linear-gradient(90deg, #223380 1.18%, #d32668 100%);
     color: white;
     padding: 20px;

@@ -1,52 +1,21 @@
 .todo-div {
     align-items: center;
+    display: flex;
     background: rgb(224, 178, 178);
     border-radius: 3px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-    display: flex;
     font-size: 21px;
-    margin-left: 12px;
-    margin-bottom: 6px;
+    margin : 1% 1%;
     padding: 3px 10px;
 }
-
-.div-button-delete{
-    background: linear-gradient(90.41deg, #8d1f1f 1.14%, #da1822 100%);
-    border-radius: 100%;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-    font-size: 18px;
-    margin: 6px;
-    padding: 5px 15px;
-    
-}
-
-.div-button-delete:hover {
-    background:linear-gradient(90.41deg, #c71111 1.14%, #f00606 100%);
-    color: rgb(248, 241, 241);
-    cursor: pointer
-  }
-
-.div-button {
-    background: linear-gradient(90.41deg, #1f808d 1.14%, #4c18da 100%);
-    border-radius: 5px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-    font-size: 18px;
-    margin-bottom: 6px;
-    margin-left: 15px;
-    padding: 5px 15px;
-}
-.div-button-home{
+.todo-div:hover{
     background: linear-gradient(90.41deg, #d0d7d8 1.14%, #beb4da 100%);
-    border-radius: 5px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-    font-size: 18px;
-    margin-bottom: 6px;
-    margin-left: 10px;
-    padding: 5px 15px;
+    cursor: pointer;
+}
+.a-div{
+    text-align: right ;
+}
+li{
+    margin-right: 1%;
 }
 
-.div-button:hover {
-    background: linear-gradient(90.41deg, #3d2433 1.14%, #5a1c5a 100%);
-    color: rgb(248, 241, 241);
-    cursor: pointer
-  }

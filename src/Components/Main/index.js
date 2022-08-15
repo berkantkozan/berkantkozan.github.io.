@@ -1,93 +1,80 @@
 import React, { useContext } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { GlobalContext } from "../Context/provider.js"
+import { GlobalContext } from "../Context/index.js"
 import TodoForm from "../Todo-Form/index.js"
+import Todo from "../Todo/index.js"
 import Description from "../Description/index.js"
 import "./style.css";
 
 export default function Main() {
 
-    const {todos, setTodos} = useContext(GlobalContext);
-
-    const addTodo = text => {
-        const newTodos = [...todos, { text }];
-        setTodos(newTodos);
-    };
-
-    const completeTodo = index => {
-        const newTodos = [...todos];
-        newTodos[index].isCompleted = newTodos[index].isCompleted ? false : true;
-        setTodos(newTodos);
-    };
-
-    /*const editTodo = (index,text) => {
-        console.log(index,text)
-        const newTodos = [...todos];
-        newTodos[index] = text;
-        setTodos(newTodos)
-    }; */
-
-    const deleteTodo = index => {
-        const newTodos = [...todos];
-        newTodos.splice(index, 1);
-        setTodos(newTodos);
-    };
-
+    const {
+        todos,
+        addTodo,
+        info
+    } = useContext(GlobalContext);
     return (
         <main>
-            <Router basename={process.env.PUBLIC_URL}>
+            {info ? <Description /> :
                 <div className="div" >
                     <div className="div-alt">
                         <div className="div-up">
-                            <button
-                                type="button"
-                                className="div-button-home"
-                            ><Link to="/">Home</Link>
-                            </button>
+                            <h1>TO-DO LIST</h1>
                             <TodoForm addTodo={addTodo} />
                         </div>
-                        <div>
+                        <div className="todo-divs">
                             {todos.map((todo, index) => (
                                 todo.id = index,
-                                <RouterArrange
-                                    key={index}
-                                    todo={todo}
-                                    completeTodo={completeTodo}
-                                    deleteTodo={deleteTodo}
-                                    addTodo={addTodo} />
-
-
-                            ))}
+                                <Todo key={index} todo={todo} />))}
                         </div>
                     </div>
                 </div>
-            </Router>
+            }
         </main>
     )
 }
 
-function RouterArrange({ todo, completeTodo, deleteTodo }) {
-
-    let smt = `/${todo.id}`
+/*function RouterArrange({ todos, completeTodo, deleteTodo }) {
+    const [isEditing, setIsEditing] = useState(false)
+    const navigate = useNavigate();
+    const [selectedTodo, setselectedTodo] = useState({})
+    const todoDetailOnClick = (todo) => {
+        setselectedTodo(todo)
+        navigate(`/${todo.id}`)
+    }
+    console.log(todos)
     return (
         <div
             className="todo-div"
-            style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}
+        // style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}
         >
             <div>
-                <Link to={smt}>{todo.text}</Link>
-                <Routes>
-                    <Route path="/"></Route>
-                    <Route
-                        exact path={smt}
-                        element={<Description
-                            todo={todo}
-                        />}
-                    ></Route>
-                </Routes>
+                {
+                    todos.map(todo =>
+                        <div
+                            contentEditable={isEditing}
+                            onInput={(e) => todo.text = e.currentTarget.textContent}>
+                            <div onClick={() => todoDetailOnClick(todo)}>{todo.text}</div>
+                        </div>
+                    )}
+
+                <div>
+                    <Routes>
+                        <Route path="/"></Route>
+                        <Route
+                            exact path={`/${selectedTodo.id}`}
+                            element={<Description
+                                todo={selectedTodo}
+                            />}
+                        ></Route>
+                    </Routes>
+                </div>
 
             </div>
-            <div>
+            {/* <div>
+                <button
+                    className="div-button"
+                    onClick={() => setIsEditing(!isEditing)}
+                >{isEditing ? "save" : "edit"}</button>
                 <button
                     className="div-button"
                     onClick={() => completeTodo(todo.id)}
@@ -96,7 +83,7 @@ function RouterArrange({ todo, completeTodo, deleteTodo }) {
                     className="div-button-delete"
                     onClick={() => deleteTodo(todo.id)}
                 >x</button>
-            </div>
+            </div> }
         </div>
     )
-}
+}*/
