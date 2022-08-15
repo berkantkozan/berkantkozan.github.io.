@@ -1,7 +1,7 @@
 import React from "react"
 import { Routes, Route } from "react-router-dom"
-import Description from "../Description"
-import Body from "../body"
+import Description from "../Description/index.js"
+import Body from "../body/index.js"
 
 export default function DescriptionRoute() {
     return (
