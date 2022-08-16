@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { GlobalContext } from "../Context/index.js"
@@ -8,17 +8,13 @@ import "./style.css";
 export default function Todo({ todo }) {
   const {
     completeTodo,
-    deleteTodo,
-    setInfo,
-    info
+    deleteTodo
   } = useContext(GlobalContext);
 
   const navigate = useNavigate();
+
   const todoDetailOnClick = (todo) => {
-    //setselectedTodo(todo)
-    setInfo(!info)
     navigate(`/${todo.id}`)
-    console.log(todo.id)
   }
   return (
     <div className="main-div">
@@ -46,5 +42,3 @@ export default function Todo({ todo }) {
     </div>
   )
 }
- /*  */
-

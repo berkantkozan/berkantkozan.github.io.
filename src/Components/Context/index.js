@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, createContext } from "react";
+import React, { useState, createContext, useEffect } from "react";
 
 export const GlobalContext = createContext()
 
@@ -13,8 +12,16 @@ export const ContextProvider = ({ children }) => {
             date: new Date()
         },
     ]);
-    const [info, setInfo] = useState(false)
-    const [selectedTodo, setselectedTodo] = useState({})
+
+    useEffect(() => {
+        const storedTodos = JSON.parse(localStorage.getItem("localTodos"));
+        if(storedTodos) setTodos(storedTodos);
+    }, [])
+    
+    useEffect(() => {
+        localStorage.setItem("localTodos", JSON.stringify(todos));
+    }, [todos])
+
 
     const addTodo = (text) => {
         const newTodo = { text, date: new Date() };
@@ -38,11 +45,7 @@ export const ContextProvider = ({ children }) => {
             setTodos,
             addTodo,
             completeTodo,
-            deleteTodo,
-            info,
-            setInfo,
-            selectedTodo,
-            setselectedTodo
+            deleteTodo
         }} >
             {children}
         </GlobalContext.Provider>

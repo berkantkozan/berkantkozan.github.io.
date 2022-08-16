@@ -5,28 +5,3 @@ main {
     padding: 36px;
     height: 100vh;
 }
-
-.div{
-    height: 100vh;
-    padding: 50px;
-    align-items: center;
-    
-}
-
-.div-alt {
-    position: relative;
-    background: #b6afac;
-    border-radius: 4px;
-    width: 70%;
-    padding: 7px;
-    margin-left: 10%;
-    margin-right: 10%;
-    
-}
-.div-up{
-    text-align: center;
-    margin-left: 1%;
-    margin-right: 1%;
-}
-
-

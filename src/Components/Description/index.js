@@ -5,12 +5,10 @@ import { useNavigate, useParams } from 'react-router-dom';
 import "./style.css"
 
 export default function Description() {
-    const { setInfo, todos } = useContext(GlobalContext);
+    const { todos } = useContext(GlobalContext);
     const navigate = useNavigate();
     const { id } = useParams();
-    console.log(id);
     function handleClick() {
-        //setInfo(false)
         navigate(`/`)
     }
     const [isEditing, setIsEditing] = useState(false)
@@ -21,7 +19,7 @@ export default function Description() {
                     <Button variant="secondary" onClick={handleClick}>homepage</Button>
                     <div className="div-up">
                         <form>
-                            {todos.filter((todo) => todo.id == id).map(todo => (
+                            {todos.filter((todo) => todo.id.toLocaleString() === id).map(todo => (
                                 <div key={id}>
                                     <div><h1>TASK NUMBER: {todo.id}</h1></div><div
                                     className="desc-div"
